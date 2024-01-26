@@ -28,8 +28,9 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from 'vue';
+import { ref} from 'vue';
 import {useRouter} from "vue-router";
+
 
 const router = useRouter()
 
@@ -43,14 +44,12 @@ const originTagList = [{
   ],
 },
   {
-    text: '年级',
+    text: '语言',
     children: [
-      {text: '大一', id: '大一'},
-      {text: '大二', id: '大二'},
-      {text: '大3', id: '大3'},
-      {text: '大4', id: '大4'},
-      {text: '大5', id: '大5aaaaaaa'},
-      {text: '大6', id: '大6aaaaaaa'},
+      {text: 'java', id: 'java'},
+      {text: 'python', id: 'python'},
+      {text: 'c', id: 'c'},
+      {text: 'c++', id: 'c++'},
     ],
   },
 ]
@@ -92,13 +91,12 @@ const doClose = (tag) => {
  */
 const doSearchResult = () => {
   router.push({
-    path: '/user/list',
+    path: '/search/result',
     query: {
       tags: activeIds.value
     }
   })
 }
-
 </script>
 
 <style scoped>

@@ -14,4 +14,5 @@ export type CurrentUser = {
     planetCode: string;
     tags: string[];
     createTime: Date;
+    profile: string;
 };
