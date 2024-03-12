@@ -19,6 +19,8 @@
     <van-cell title="邮箱" is-link to='/person/edit' :value="user.email" @click="toEdit('email', '邮箱', user.email)"/>
     <van-cell title="星球编号" :value="user.planetCode"/>
     <van-cell title="注册时间" :value="user.createTime"/>
+    <van-cell title="加入的队伍" is-link to="/team/join"/>
+    <van-cell title="创建的队伍" is-link to="/team/create"/>
   </template>
 </template>
 

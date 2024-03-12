@@ -1,5 +1,5 @@
-import myAxios from "../plugins/myAxios";
 import {getCurrentUserState} from "../states/person.ts";
+import myAxios from "../plugins/myAxios.ts";
 
 
 /**
@@ -14,7 +14,7 @@ export const getCurrentUser = async () => {
     }
     //从远程处获取用户信息
     const res = await myAxios.get("/user/current");
-    if (200 == res.code) {
+    if (res?.code === 200) {
         // setCurrentUserState(res.data);
         return res.data;
     }

@@ -14,5 +14,6 @@ export default defineConfig({
   //配置端口号
   server: {
     port: 3000,
-  }
+  },
+  base: './',
 })

@@ -14,9 +14,9 @@ import {onMounted, ref} from "vue";
 import myAxios from "../plugins/myAxios.ts";
 import {Toast} from "vant";
 
+const router = useRouter()
 const teamList = ref([]);
 const searchText = ref();
-
 
 onMounted(() => {
   listTeam('');
@@ -25,7 +25,7 @@ const onSearch = (val) => {
   listTeam(val); //按搜索关键词搜索
 }
 const listTeam = async (val = '') => {
-  const res = await myAxios.post("/team/list", {
+  const res = await myAxios.get("/team/getJoinTeams", {
     params: {
       searchText: val,
     },

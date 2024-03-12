@@ -29,10 +29,10 @@
 <script setup lang="ts">
 import myAxios from "../plugins/myAxios.ts";
 import {ref} from "vue";
-import {useRouter} from "vue-router";
+import {useRouter, useRoute} from "vue-router";
 
 const router = useRouter();
-
+const route = useRoute();
 const userAccount = ref('');
 const userPwd = ref('');
 

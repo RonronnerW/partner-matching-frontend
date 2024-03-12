@@ -12,7 +12,7 @@ export type CurrentUser = {
     userStatus: number;
     role: number;
     planetCode: string;
-    tags: string[];
+    tags: string;
     createTime: Date;
     profile: string;
 };

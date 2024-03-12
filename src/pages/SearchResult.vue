@@ -7,7 +7,7 @@ CreateTime:10:10
   <van-empty v-if="!userList || userList.length < 1" description="搜索结果为空"/>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {onMounted, ref} from "vue";
 import {useRoute} from "vue-router";
 import {Toast} from "vant";
